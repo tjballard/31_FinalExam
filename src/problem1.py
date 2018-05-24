@@ -181,7 +181,7 @@ def problem1b(numbers):
     for k in range(len(numbers)):
         if k == (len(numbers)//3):
             for j in range(k):
-                total = total + numbers[j]
+                total = total + numbers[k]
     return total
 
 
