@@ -93,9 +93,34 @@ def problem3(point, circle1, circle2, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+    point.attach_to(window)
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    line = rg.Line(point, circle1.center)
+    line.color = circle2.fill_color
+    line2 = rg.Line(circle1.center, circle2.center)
+    line2.color = circle2.fill_color
+    line3 = rg.Line(point, circle2.center)
+    line3.color = circle2.fill_color
+    line4 = rg.Line(line.get_midpoint(), line2.get_midpoint())
+    line4.color = circle2.fill_color
+    line5 = rg.Line(line2.get_midpoint(), line3.get_midpoint())
+    line5.color = circle2.fill_color
+    line6 = rg.Line(line3.get_midpoint(), line.get_midpoint())
+    line6.color = circle2.fill_color
+    line.attach_to(window)
+    line2.attach_to(window)
+    line3.attach_to(window)
+    line4.attach_to(window)
+    line5.attach_to(window)
+    line6.attach_to(window)
+
+    window.render(.5)
+    # Note to Dr. Mutchler: It would probably have been easier if I used a loop to create the lines, but I
+    # noticed this too late.
 
 
 # -----------------------------------------------------------------------------
