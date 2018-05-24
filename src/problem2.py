@@ -19,9 +19,9 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    run_test_problem2a()
+    # run_test_problem2a()
     # run_test_problem2b()
-    # run_test_problem2c()
+    run_test_problem2c()
 
 
 def is_prime(n):
@@ -170,7 +170,7 @@ def problem2a(x, sequence):
       :type sequence:  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     total = []
@@ -255,10 +255,14 @@ def problem2b(sequence):
       :type sequence  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    # for k in range(len(sequence)):
+    index = 0
+    for k in range(len(sequence)):
+        if abs(sequence[k]) > abs(sequence[index]):
+            index = k
+    return index
 
 
 def run_test_problem2c():
@@ -399,9 +403,14 @@ def problem2c(x):
       :type x:    int
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    while is_prime(sum_of_digits(x)) is False or is_prime(x) is False:
+        x = x+1
+    return x
+
 
 
 ###############################################################################
