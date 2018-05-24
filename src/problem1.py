@@ -178,9 +178,11 @@ def problem1b(numbers):
     # -------------------------------------------------------------------------
     total = 0
 
-    for k in range(len(numbers)//3):
+    for k in range(len(numbers)//3, 2*len(numbers)//3):
         total = total + numbers[k]
     return total
+
+
 
 
 ###############################################################################
