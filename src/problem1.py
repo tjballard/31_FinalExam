@@ -173,15 +173,13 @@ def problem1b(numbers):
       :type numbers:  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     total = 0
 
-    for k in range(len(numbers)):
-        if k == (len(numbers)//3):
-            for j in range(k):
-                total = total + numbers[k]
+    for k in range(len(numbers)//3):
+        total = total + numbers[k]
     return total
 
 

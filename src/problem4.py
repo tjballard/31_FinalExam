@@ -28,6 +28,20 @@ def main():
     #     -- Construct two Pig objects
     #     -- Call each method that you implement below.
     # -------------------------------------------------------------------------
+    pig = Pig(25)
+    # Test for Eat
+    expected = 70
+    actual = pig.eat(45)
+    print(expected, actual)
+
+    pig2 = Pig(55)
+    # Test for heavier pig
+    expected2 = pig2.weight
+    actual2 = pig.heavier_pig(pig2).weight
+    print(expected2, actual2)
+
+
+    print(pig.eat_for_a_year())
 
 
 class Pig(object):
